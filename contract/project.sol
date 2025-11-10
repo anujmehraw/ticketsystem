@@ -60,6 +60,11 @@ contract TicketSystem is ERC721, Ownable {
         return _tickets[tokenId];
     }
 
+    // 🆕 New function — total tickets minted so far
+    function totalTicketsSold() external view returns (uint256) {
+        return _tokenIds;
+    }
+
     function supportsInterface(bytes4 interfaceId) public view virtual override returns (bool) {
         return super.supportsInterface(interfaceId);
     }
